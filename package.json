@@ -1,0 +1,12 @@
+{
+  "name": "positive-blockchain-app-scripts",
+  "version": "1.0.0",
+  "description": "A repository for managing Google App Scripts for the PositiveBlockchain project",
+  "main": "index.js",
+  "author": "drewdrewthis@gmail.com",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@google/clasp": "^2.4.2"
+  }
+}
