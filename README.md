@@ -1,5 +1,11 @@
 # Google Apps Script Management with `clasp`
 
+## What does Positive Blockchain use Google App Scripts for?
+
+Positive Blockchain uses App Scripts associated with certain files that will respond to certain things like form submits and file saves.
+
+To allow for good documentation and version control, we use clasp and check changes here into this repository.
+
 This project demonstrates how to manage your Google Apps Script projects using `clasp`, a command-line tool provided by Google. `clasp` allows you to develop, manage, and deploy your Google Apps Script projects using modern development workflows.
 
 ## Prerequisites
