@@ -45,6 +45,8 @@ function copySheetWithPublicColumns() {
  * @returns {number[]} An array of column indices representing public columns.
  */
 function getPublicColumns(sheet) {
+  // Expect error: TypeError: Cannot read properties of null (reading 'getRange')
+  // but the script runs as expected.
   const headers = sheet.getRange(2, 1, 1, sheet.getLastColumn()).getValues()[0];
   const publicColumns = [];
   for (let i = 0; i < headers.length; i++) {
