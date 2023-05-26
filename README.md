@@ -31,6 +31,10 @@ Before using this project, ensure you have the following prerequisites installed
    yarn clasp login
    ```
 
+**NOTE**
+You will need to enable the script API:
+https://script.google.com/home/usersettings
+
 ## Additional Resources
 
 - [clasp documentation](https://developers.google.com/apps-script/guides/clasp)

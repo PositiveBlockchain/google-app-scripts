@@ -8,5 +8,8 @@
   "private": false,
   "dependencies": {
     "@google/clasp": "^2.4.2"
-  }
+  },
+  "workspaces": [
+    "1XAUCuYTnfTHkdaTNUV9wghpTePTcOo-Zwebv3sL-Lyi9J9u39VGQC5tX"
+  ]
 }
