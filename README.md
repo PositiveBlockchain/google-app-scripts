@@ -36,6 +36,22 @@ Before using this project, ensure you have the following prerequisites installed
 You will need to enable the script API:
 https://script.google.com/home/usersettings
 
+## Editing projects
+
+Each project is named by its ScriptId (see the [clone section](https://developers.google.com/apps-script/guides/clasp#clone_an_existing_project) to find the script id.)
+
+You will need to go into a specific project directory to edit and run clasp commands. Remember to use `yarn clasp` if you don't have clasp installed globally.
+
+## Adding new projects
+
+Simply use the helper script to add a new project:
+
+`sh scripts/clone_project.sh`
+
+or
+
+`yarn init_project`
+
 ## Additional Resources
 
 - [clasp documentation](https://developers.google.com/apps-script/guides/clasp)
