@@ -9,7 +9,11 @@
   "dependencies": {
     "@google/clasp": "^2.4.2"
   },
+  "scripts": {
+    "init_project": "sh ./scripts/clone_project.sh"
+  },
   "workspaces": [
-    "1XAUCuYTnfTHkdaTNUV9wghpTePTcOo-Zwebv3sL-Lyi9J9u39VGQC5tX"
+    "1XAUCuYTnfTHkdaTNUV9wghpTePTcOo-Zwebv3sL-Lyi9J9u39VGQC5tX",
+    "1Zf3rj2lCfQWuFaYB4vrYLpsoPDOyJGxeY7KC5OByKsdXpc8xXHUBYd-E"
   ]
 }

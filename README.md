@@ -9,6 +9,7 @@ Before using this project, ensure you have the following prerequisites installed
 - [Node.js](https://nodejs.org) (version 12 or above)
 - [Yarn](https://yarnpkg.com) or [npm](https://www.npmjs.com) package manager
 - [clasp](https://github.com/google/clasp)
+- [jq](https://stedolan.github.io/jq/)
 
 ## Getting Started
 
