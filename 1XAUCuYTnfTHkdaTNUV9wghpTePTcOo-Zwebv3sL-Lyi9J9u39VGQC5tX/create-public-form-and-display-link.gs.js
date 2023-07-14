@@ -47,10 +47,10 @@ function copySheetWithPublicColumns() {
     );
   }
 
-  const publicColumns = getPublicColumns(sheetToCopy);
-  const newSheet = createNewSheet(publicColumns);
-  copyDataToNewSheet(sheetToCopy, newSheet, publicColumns);
-  deleteColumnsExcept(newSheet, publicColumns);
+  const publicColumnsIndexes = getPublicColumns(sheetToCopy);
+  const newSheet = createNewSheet();
+  copyDataToNewSheet(sheetToCopy, newSheet, publicColumnsIndexes);
+  deleteColumnsExcept(newSheet, publicColumnsIndexes);
   return newSheet;
 }
 
@@ -76,10 +76,9 @@ function getPublicColumns(sheet) {
 /**
  * Creates a new sheet in the destination spreadsheet folder.
  *
- * @param {number[]} publicColumns - An array of column indices representing public columns.
  * @returns {Sheet} The newly created sheet.
  */
-function createNewSheet(publicColumns) {
+function createNewSheet() {
   const folder = DriveApp.getFolderById(DESTINATION_SPREADSHEET_FOLDER_ID);
   const newSheetName = createNewSheetName();
   const newSheetFile = SpreadsheetApp.create(newSheetName);
@@ -93,18 +92,23 @@ function createNewSheet(publicColumns) {
  *
  * @param {Sheet} originalSheet - The original sheet to copy data from.
  * @param {Sheet} newSheet - The new sheet to copy data to.
- * @param {number[]} publicColumns - An array of column indices representing public columns.
+ * @param {number[]} publicColumnsIndexes - An array of column indices representing public columns.
  */
-function copyDataToNewSheet(originalSheet, newSheet, publicColumns) {
+function copyDataToNewSheet(originalSheet, newSheet, publicColumnsIndexes) {
   const numRows = originalSheet.getLastRow();
+
+  const lastPublicColumnIdx =
+    publicColumnsIndexes[publicColumnsIndexes.length - 1];
+
   const rangeToCopy = originalSheet.getRange(
     1,
     1,
     numRows,
-    publicColumns.length
+    lastPublicColumnIdx
   );
+
   const dataToCopy = rangeToCopy.getValues();
-  const rangeToPaste = newSheet.getRange(1, 1, numRows, publicColumns.length);
+  const rangeToPaste = newSheet.getRange(1, 1, numRows, lastPublicColumnIdx);
   rangeToPaste.setValues(dataToCopy);
 }
 

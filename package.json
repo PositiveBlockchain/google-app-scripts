@@ -10,7 +10,11 @@
     "@google/clasp": "^2.4.2"
   },
   "scripts": {
-    "init_project": "sh ./scripts/clone_project.sh"
+    "init_project": "sh ./scripts/clone_project.sh",
+    "deploy_changes:create_public_form": "sh ./scripts/deploy_latest_version.sh 1XAUCuYTnfTHkdaTNUV9wghpTePTcOo-Zwebv3sL-Lyi9J9u39VGQC5tX",
+    "push_changes:create_public_form": "sh ./scripts/push_changes.sh 1XAUCuYTnfTHkdaTNUV9wghpTePTcOo-Zwebv3sL-Lyi9J9u39VGQC5tX",
+    "deploy_changes:create_build_upload_sheet": "sh ./scripts/deploy_latest_version.sh 1Zf3rj2lCfQWuFaYB4vrYLpsoPDOyJGxeY7KC5OByKsdXpc8xXHUBYd-E",
+    "push_changes:create_build_upload_sheet": "sh ./scripts/push_changes.sh 1Zf3rj2lCfQWuFaYB4vrYLpsoPDOyJGxeY7KC5OByKsdXpc8xXHUBYd-E"
   },
   "workspaces": [
     "1XAUCuYTnfTHkdaTNUV9wghpTePTcOo-Zwebv3sL-Lyi9J9u39VGQC5tX",
